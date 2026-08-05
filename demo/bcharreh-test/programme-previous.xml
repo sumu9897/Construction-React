@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/project">
+  <SaveVersion>14</SaveVersion>
+  <Name>BCHARREH-TEST</Name>
+  <Title>BCHARREH-TEST</Title>
+  <Author>Test Harness</Author>
+  <CurrencyCode>USD</CurrencyCode>
+  <MinutesPerDay>480</MinutesPerDay>
+  <StartDate>2026-03-02T08:00:00</StartDate>
+  <FinishDate>2026-11-27T17:00:00</FinishDate>
+  <StatusDate>2026-06-30T00:00:00</StatusDate>
+  <LastSaved>2026-06-30T09:00:00</LastSaved>
+  <Calendars>
+    <Calendar>
+      <UID>1</UID>
+      <Name>6 Day Site Calendar</Name>
+    </Calendar>
+  </Calendars>
+  <Tasks>
+    <Task>
+      <UID>0</UID>
+      <ID>0</ID>
+      <Name>BCHARREH-TEST</Name>
+      <IsNull>0</IsNull>
+      <OutlineLevel>0</OutlineLevel>
+      <Summary>1</Summary>
+    </Task>
+    <Task>
+      <UID>1000</UID>
+      <ID>1</ID>
+      <Name>Site establishment &amp; scaffolding — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>EN-100</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT80H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-03-02T08:00:00</Start>
+      <Finish>2026-03-13T17:00:00</Finish>
+      <EarlyStart>2026-03-02T08:00:00</EarlyStart>
+      <EarlyFinish>2026-03-13T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-03-02T08:00:00</ActualStart>
+      <ActualFinish>2026-03-13T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+    </Task>
+    <Task>
+      <UID>1001</UID>
+      <ID>2</ID>
+      <Name>Scaffolding — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>EN-110</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT80H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-03-16T08:00:00</Start>
+      <Finish>2026-03-27T17:00:00</Finish>
+      <EarlyStart>2026-03-16T08:00:00</EarlyStart>
+      <EarlyFinish>2026-03-27T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-03-16T08:00:00</ActualStart>
+      <ActualFinish>2026-03-31T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>28800</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+    </Task>
+    <Task>
+      <UID>1002</UID>
+      <ID>3</ID>
+      <Name>Roof strip &amp; timber survey — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>RF-200</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT120H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-03-16T08:00:00</Start>
+      <Finish>2026-04-03T17:00:00</Finish>
+      <EarlyStart>2026-03-16T08:00:00</EarlyStart>
+      <EarlyFinish>2026-04-03T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-03-16T08:00:00</ActualStart>
+      <ActualFinish>2026-04-08T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1000</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1003</UID>
+      <ID>4</ID>
+      <Name>Roof re-tile — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>RF-210</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT160H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-04-06T08:00:00</Start>
+      <Finish>2026-05-01T17:00:00</Finish>
+      <EarlyStart>2026-04-06T08:00:00</EarlyStart>
+      <EarlyFinish>2026-05-01T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-04-09T08:00:00</ActualStart>
+      <ActualFinish>2026-05-08T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1002</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1004</UID>
+      <ID>5</ID>
+      <Name>Roof strip — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>RF-220</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT120H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-04-06T08:00:00</Start>
+      <Finish>2026-04-24T17:00:00</Finish>
+      <EarlyStart>2026-04-06T08:00:00</EarlyStart>
+      <EarlyFinish>2026-04-24T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-04-10T08:00:00</ActualStart>
+      <ActualFinish>2026-05-01T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>24000</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1001</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1005</UID>
+      <ID>6</ID>
+      <Name>Roof re-tile — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>RF-230</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT160H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-04-27T08:00:00</Start>
+      <Finish>2026-05-22T17:00:00</Finish>
+      <EarlyStart>2026-04-27T08:00:00</EarlyStart>
+      <EarlyFinish>2026-05-22T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-05-04T08:00:00</ActualStart>
+      <ActualFinish>2026-06-05T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>24000</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1004</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1006</UID>
+      <ID>7</ID>
+      <Name>Stone repairs &amp; repointing — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>ST-300</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT400H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-04-06T08:00:00</Start>
+      <Finish>2026-06-12T17:00:00</Finish>
+      <EarlyStart>2026-04-06T08:00:00</EarlyStart>
+      <EarlyFinish>2026-06-12T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-04-13T08:00:00</ActualStart>
+      <ActualFinish>2026-06-26T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>38400</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1003</PredecessorUID>
+        <Type>3</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1007</UID>
+      <ID>8</ID>
+      <Name>Stone repairs &amp; repointing — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>ST-310</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT320H0M0S</Duration>
+      <RemainingDuration>PT160H0M0S</RemainingDuration>
+      <Start>2026-05-25T08:00:00</Start>
+      <Finish>2026-07-17T17:00:00</Finish>
+      <EarlyStart>2026-05-25T08:00:00</EarlyStart>
+      <EarlyFinish>2026-07-17T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-06-08T08:00:00</ActualStart>
+      
+      <PercentComplete>40</PercentComplete>
+      <PhysicalPercentComplete>40</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1005</PredecessorUID>
+        <Type>3</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1008</UID>
+      <ID>9</ID>
+      <Name>Structural steel ties &amp; new lintels — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>SR-400</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT160H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-05-04T08:00:00</Start>
+      <Finish>2026-05-29T17:00:00</Finish>
+      <EarlyStart>2026-05-04T08:00:00</EarlyStart>
+      <EarlyFinish>2026-05-29T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-05-11T08:00:00</ActualStart>
+      <ActualFinish>2026-06-05T17:00:00</ActualFinish>
+      <PercentComplete>100</PercentComplete>
+      <PhysicalPercentComplete>100</PhysicalPercentComplete>
+      <TotalSlack>14400</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1006</PredecessorUID>
+        <Type>3</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>48000</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1009</UID>
+      <ID>10</ID>
+      <Name>Joinery restoration in workshop (windows &amp; doors)</Name>
+      <IsNull>0</IsNull>
+      <WBS>JN-500</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT480H0M0S</Duration>
+      <RemainingDuration>PT120H0M0S</RemainingDuration>
+      <Start>2026-04-13T08:00:00</Start>
+      <Finish>2026-07-03T17:00:00</Finish>
+      <EarlyStart>2026-04-13T08:00:00</EarlyStart>
+      <EarlyFinish>2026-07-03T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-04-13T08:00:00</ActualStart>
+      
+      <PercentComplete>68</PercentComplete>
+      <PhysicalPercentComplete>68</PhysicalPercentComplete>
+      <TotalSlack>9600</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+    </Task>
+    <Task>
+      <UID>1010</UID>
+      <ID>11</ID>
+      <Name>Joinery installation — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>JN-510</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT160H0M0S</Duration>
+      <RemainingDuration>PT160H0M0S</RemainingDuration>
+      <Start>2026-07-06T08:00:00</Start>
+      <Finish>2026-07-31T17:00:00</Finish>
+      <EarlyStart>2026-07-06T08:00:00</EarlyStart>
+      <EarlyFinish>2026-07-31T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>9600</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1009</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1011</UID>
+      <ID>12</ID>
+      <Name>Joinery installation — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>JN-520</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT160H0M0S</Duration>
+      <RemainingDuration>PT160H0M0S</RemainingDuration>
+      <Start>2026-08-03T08:00:00</Start>
+      <Finish>2026-08-28T17:00:00</Finish>
+      <EarlyStart>2026-08-03T08:00:00</EarlyStart>
+      <EarlyFinish>2026-08-28T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>19200</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1010</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1012</UID>
+      <ID>13</ID>
+      <Name>MEP first fix — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>ME-600</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT240H0M0S</Duration>
+      <RemainingDuration>PT112H0M0S</RemainingDuration>
+      <Start>2026-06-08T08:00:00</Start>
+      <Finish>2026-07-10T17:00:00</Finish>
+      <EarlyStart>2026-06-08T08:00:00</EarlyStart>
+      <EarlyFinish>2026-07-10T17:00:00</EarlyFinish>
+      
+      
+      <ActualStart>2026-06-08T08:00:00</ActualStart>
+      
+      <PercentComplete>50</PercentComplete>
+      <PhysicalPercentComplete>50</PhysicalPercentComplete>
+      <TotalSlack>33600</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1003</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1013</UID>
+      <ID>14</ID>
+      <Name>MEP first fix — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>ME-610</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT240H0M0S</Duration>
+      <RemainingDuration>PT240H0M0S</RemainingDuration>
+      <Start>2026-07-27T08:00:00</Start>
+      <Finish>2026-09-04T17:00:00</Finish>
+      <EarlyStart>2026-07-27T08:00:00</EarlyStart>
+      <EarlyFinish>2026-09-04T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1005</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1014</UID>
+      <ID>15</ID>
+      <Name>Lime plaster &amp; render — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>PL-700</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT240H0M0S</Duration>
+      <RemainingDuration>PT240H0M0S</RemainingDuration>
+      <Start>2026-07-13T08:00:00</Start>
+      <Finish>2026-08-21T17:00:00</Finish>
+      <EarlyStart>2026-07-13T08:00:00</EarlyStart>
+      <EarlyFinish>2026-08-21T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1012</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+      <PredecessorLink>
+        <PredecessorUID>1010</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1015</UID>
+      <ID>16</ID>
+      <Name>Lime plaster &amp; render — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>PL-710</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT240H0M0S</Duration>
+      <RemainingDuration>PT240H0M0S</RemainingDuration>
+      <Start>2026-09-07T08:00:00</Start>
+      <Finish>2026-10-16T17:00:00</Finish>
+      <EarlyStart>2026-09-07T08:00:00</EarlyStart>
+      <EarlyFinish>2026-10-16T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1013</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1016</UID>
+      <ID>17</ID>
+      <Name>Internal finishes — House A</Name>
+      <IsNull>0</IsNull>
+      <WBS>FN-800</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT240H0M0S</Duration>
+      <RemainingDuration>PT240H0M0S</RemainingDuration>
+      <Start>2026-08-24T08:00:00</Start>
+      <Finish>2026-10-02T17:00:00</Finish>
+      <EarlyStart>2026-08-24T08:00:00</EarlyStart>
+      <EarlyFinish>2026-10-02T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>14400</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1014</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1017</UID>
+      <ID>18</ID>
+      <Name>Internal finishes — House B</Name>
+      <IsNull>0</IsNull>
+      <WBS>FN-810</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT200H0M0S</Duration>
+      <RemainingDuration>PT200H0M0S</RemainingDuration>
+      <Start>2026-10-19T08:00:00</Start>
+      <Finish>2026-11-20T17:00:00</Finish>
+      <EarlyStart>2026-10-19T08:00:00</EarlyStart>
+      <EarlyFinish>2026-11-20T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1015</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+    <Task>
+      <UID>1018</UID>
+      <ID>19</ID>
+      <Name>External works, terraces &amp; drainage</Name>
+      <IsNull>0</IsNull>
+      <WBS>EX-900</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>0</Milestone>
+      <Active>1</Active>
+      <Duration>PT320H0M0S</Duration>
+      <RemainingDuration>PT320H0M0S</RemainingDuration>
+      <Start>2026-09-07T08:00:00</Start>
+      <Finish>2026-10-30T17:00:00</Finish>
+      <EarlyStart>2026-09-07T08:00:00</EarlyStart>
+      <EarlyFinish>2026-10-30T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>43200</TotalSlack>
+      
+      <Critical>0</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+    </Task>
+    <Task>
+      <UID>1019</UID>
+      <ID>20</ID>
+      <Name>Practical completion</Name>
+      <IsNull>0</IsNull>
+      <WBS>PC-999</WBS>
+      <OutlineLevel>1</OutlineLevel>
+      <Summary>0</Summary>
+      <Milestone>1</Milestone>
+      <Active>1</Active>
+      <Duration>PT0H0M0S</Duration>
+      <RemainingDuration>PT0H0M0S</RemainingDuration>
+      <Start>2026-11-27T08:00:00</Start>
+      <Finish>2026-11-27T17:00:00</Finish>
+      <EarlyStart>2026-11-27T08:00:00</EarlyStart>
+      <EarlyFinish>2026-11-27T17:00:00</EarlyFinish>
+      
+      
+      
+      
+      <PercentComplete>0</PercentComplete>
+      <PhysicalPercentComplete>0</PhysicalPercentComplete>
+      <TotalSlack>0</TotalSlack>
+      
+      <Critical>1</Critical>
+      <ConstraintType>0</ConstraintType>
+      
+      <CalendarUID>1</CalendarUID>
+      <PredecessorLink>
+        <PredecessorUID>1017</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+      <PredecessorLink>
+        <PredecessorUID>1016</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+      <PredecessorLink>
+        <PredecessorUID>1018</PredecessorUID>
+        <Type>1</Type>
+        <CrossProject>0</CrossProject>
+        <LinkLag>0</LinkLag>
+        <LagFormat>7</LagFormat>
+      </PredecessorLink>
+    </Task>
+  </Tasks>
+</Project>

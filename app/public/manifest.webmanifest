@@ -1,0 +1,15 @@
+{
+  "name": "PMCC",
+  "short_name": "PMCC",
+  "description": "The private portal for PMCC owners.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#0D0C0A",
+  "background_color": "#0D0C0A",
+  "icons": [
+    { "src": "/im/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/im/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

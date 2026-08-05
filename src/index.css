@@ -2,12 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+:root {
+  --ink: #0d0c0a;
+  --bone: #efe9dd;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: rgb(45,42,42);
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2722 var(--ink);
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--ink);
+  color: var(--bone);
+  font-family: "Inter Variable", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: #c8102e;
+  color: #efe9dd;
+}
+
+/* Display type: Fraunces with its optical-size and soft axes leaned on */
+.type-display {
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 40, "WONK" 0;
+  font-weight: 380;
+  letter-spacing: -0.03em;
+  /* 1.04, not tighter: SplitText line masks clip italic descenders below this */
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.type-display-it {
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  font-style: italic;
+  font-weight: 340;
+}
+
+/* Eyebrow labels */
+.type-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 560;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Film grain overlay — one fixed element for the whole site */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -100%;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(4) infinite;
+}
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-2%, 3%); }
+  50% { transform: translate(3%, -2%); }
+  75% { transform: translate(-3%, -3%); }
+  100% { transform: translate(2%, 2%); }
+}
+
+/* Masked-line reveal targets (SplitText lines get wrapped) */
+.split-mask .split-line {
+  overflow: clip;
+}
+
+/* Hairline rules */
+.rule {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.14;
+}
+
+/* Hide scrollbars inside drag galleries without disabling scroll */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain::after {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

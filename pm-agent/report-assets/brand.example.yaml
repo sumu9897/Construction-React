@@ -1,0 +1,62 @@
+# Report branding. Copy to <LEDGER_ROOT>/brand.yaml and fill in once.
+#
+# A per-project file at <LEDGER_ROOT>/<CODE>/report-brand.yaml overrides any key
+# here, for when you report under a joint venture name or a client's own template.
+
+company:
+  # Appears on the letterhead. The website says "MS Structure" in places and
+  # "MS Builders" in others - both are leftover template content.
+  name: PMCC
+  # Optional second line under the name, e.g. "Project Management & Construction
+  # Consultancy". Leave blank to omit.
+  descriptor: Project Management and Construction Consultancy
+
+  # Path to the logo, absolute or relative to this file. Base64-embedded at render
+  # time so the report stays a single self-contained file.
+  #
+  # NOTE: pmcc-logo.jpeg is a 1077x1046 JPEG with no transparency, so it renders as
+  # a solid square. A transparent PNG or an SVG would look materially better on the
+  # white letterhead. Swap the file; no code change needed.
+  logo: ../pmcc-logo.jpeg
+  # Rendered logo height in millimetres. Width scales proportionally.
+  logoHeightMm: 14
+
+# Everything below appears in the report footer. THESE ARE PLACEHOLDERS - the only
+# contact details anywhere in this repository belong to the original website
+# template's author, and must not go on a client document.
+contact:
+  address: ~
+  phone: ~
+  email: ~
+  website: ~
+
+# Who issues the report. Appears in the letterhead "Issued by" block.
+issuer:
+  name: ~          # e.g. "N. Saleh"
+  title: ~         # e.g. "Project Manager"
+
+# Shown in small type in the footer of every page. Set to ~ to omit.
+confidentiality: >-
+  Commercial in confidence. Issued for the information of the addressee only.
+
+# Colours. Defaults are derived from the website so the report reads as the same
+# organisation, toned down for print.
+colours:
+  ink: '#2D2A2A'        # headings - the site's body background, reused as ink
+  body: '#4B5563'       # body copy
+  muted: '#6B7280'      # captions, labels, footnotes
+  rule: '#E5E7EB'       # hairlines and table borders
+  panel: '#F9FAFB'      # tinted panel fill
+  accent: '#EAB308'     # the section rule, and the one number that matters
+  # Status colours. Every use is paired with a text label so the report survives
+  # being printed in black and white.
+  green: '#15803D'
+  amber: '#B45309'
+  red: '#B91C1C'
+
+# Page setup.
+page:
+  size: A4              # A4 or Letter
+  marginTopMm: 16
+  marginBottomMm: 16
+  marginSideMm: 14

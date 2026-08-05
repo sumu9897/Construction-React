@@ -1,0 +1,27 @@
+# Delay events — BCHARREH-TEST (fictional test data)
+nextRef: 3
+entries:
+  - ref: EV-001
+    date: 2026-07-14
+    activity: ST-310
+    description: >
+      Mason crew reduced from six to two for four working days — men pulled
+      to an emergency on another site. House B repointing lost the north
+      elevation window.
+    responsibility: contractor
+    responsibilityHint: contractor-or-supplier
+    reportedBy: Site foreman (test)
+    status: open
+  - ref: EV-002
+    date: 2026-07-21
+    activity: EX-900
+    description: >
+      Municipality stopped preparatory external works pending renewal of the
+      road occupation permit. Application was lodged by the Client's side on
+      12 Jul; no decision yet.
+    responsibility: employer
+    responsibilityHint: employer-or-consultant
+    reportedBy: Eng. Youssef Assi (test)
+    noticeDeadline: 2026-08-04
+    noticeGiven: null
+    status: open

@@ -1,0 +1,30 @@
+# Project configuration for BCHARREH-TEST — FICTIONAL TEST DATA
+code: BCHARREH-TEST
+name: Bcharreh Heritage Houses (TEST)
+role: contractor
+createdAt: 2026-03-02
+contract:
+  form: Bespoke lump-sum renovation agreement (test data)
+  sum: 1450000
+  currency: USD
+  completionDate: 2026-11-27
+  ldPerDay: 1500
+  ldCapPercent: 5
+  retentionPercent: 10
+  delayNoticeDays: 14
+  particularsDays: 28
+  rfiResponseDays: 7
+  submittalResponseDays: 14
+  # Cited verbatim in alerts and letters, so they quote this contract's own
+  # numbering rather than a generic form.
+  delayNoticeClause: Art. 9.2
+  particularsClause: Art. 9.2
+  ldClause: Art. 11.1
+  rfiClause: Art. 5.4
+  submittalClause: Art. 5.5
+chase:
+  lookaheadDays: 14
+  nearCriticalFloatDays: 5
+  maxQuestionsPerSession: 6
+telegram:
+  chatId: null

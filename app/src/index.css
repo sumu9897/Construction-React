@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2722 #0d0c0a;
+}
+
+body {
+  background-color: #0d0c0a;
+  color: #efe9dd;
+  font-family: "Inter Variable", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: #c8102e;
+  color: #efe9dd;
+}
+
+.type-display {
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 40, "WONK" 0;
+  font-weight: 380;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.type-display-it {
+  font-family: "Fraunces Variable", Georgia, serif;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  font-style: italic;
+  font-weight: 340;
+}
+.type-eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 560;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Film grain — the shared fingerprint with the website */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -100%;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.rule {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.14;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Screen entrance — quiet, not showy */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise {
+  animation: rise-in 0.5s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+.rise-1 { animation-delay: 0.05s; }
+.rise-2 { animation-delay: 0.1s; }
+.rise-3 { animation-delay: 0.16s; }
+.rise-4 { animation-delay: 0.22s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise, .rise-1, .rise-2, .rise-3, .rise-4 { animation: none; }
+}

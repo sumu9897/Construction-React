@@ -12,6 +12,15 @@ dist
 dist-ssr
 *.local
 
+# pm-agent
+.env
+# Transient bot state, not part of the record.
+.chase-session-*.json
+.agent-state.yaml
+# The Project Ledger holds contract sums, rates and claims strategy. Keep it in
+# its own private repo via LEDGER_ROOT rather than committing it here.
+/projects/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

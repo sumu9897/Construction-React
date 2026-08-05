@@ -1,0 +1,24 @@
+{
+  "name": "pm-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Construction PM automation spine: Project Ledger, Primavera P6 XER parser, and a Telegram PM agent.",
+  "bin": {
+    "pm": "./bin/pm.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test 'test/*.test.js'",
+    "bot": "node bin/pm.js bot",
+    "chase": "node bin/pm.js chase"
+  },
+  "dependencies": {
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}

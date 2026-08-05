@@ -1,0 +1,18 @@
+# Actions register — BCHARREH-TEST (fictional test data)
+nextRef: 3
+entries:
+  - ref: ACT-001
+    subject: Sign off joinery mockup window at the workshop
+    owner: Mr. Pierre Choueiri (Client)
+    activity: JN-500
+    date: 2026-07-08
+    dueDate: 2026-07-22
+    status: open
+    consequence: Workshop holds final assembly of remaining window sets
+  - ref: ACT-002
+    subject: Submit lime render method statement to Consultant
+    owner: PMCC (Eng. Youssef Assi)
+    activity: PL-700
+    date: 2026-07-21
+    dueDate: 2026-08-04
+    status: open

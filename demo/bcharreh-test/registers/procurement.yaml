@@ -1,0 +1,18 @@
+# Procurement register — BCHARREH-TEST (fictional test data)
+nextRef: 3
+entries:
+  - ref: PR-001
+    subject: Handmade terracotta roof tiles — top-up batch for ridge details
+    supplier: Kfarhata Kilns (test)
+    activity: EX-900
+    leadTimeWeeks: 6
+    date: 2026-07-15
+    status: open
+  - ref: PR-002
+    subject: NHL 3.5 lime — bulk order for plastering
+    supplier: Batroun Lime Co. (test)
+    activity: PL-700
+    leadTimeWeeks: 2
+    date: 2026-06-20
+    ordered: 2026-06-24
+    status: ordered

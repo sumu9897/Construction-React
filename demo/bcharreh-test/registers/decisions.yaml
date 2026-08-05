@@ -1,0 +1,26 @@
+# Decisions register — BCHARREH-TEST (fictional test data)
+nextRef: 3
+entries:
+  - ref: DEC-001
+    subject: Approve repointing mortar mix and stone sample panel — House B
+    detail: >
+      Sample panel on the north elevation of House B, prepared 8 Jul with
+      NHL 3.5 lime and local aggregate. Bulk repointing beyond the panel area
+      cannot proceed without approval.
+    owner: Mr. Pierre Choueiri (Client)
+    activity: ST-310
+    date: 2026-07-10
+    dueDate: 2026-07-24
+    status: open
+    consequence: Stone crew stands down on House B from 3 Aug
+  - ref: DEC-002
+    subject: Glazing specification for restored heritage windows
+    detail: >
+      Single glazing to match original profiles, or slimline vacuum double
+      glazing at +USD 18,400 (test figure). Affects workshop completion of the
+      last 12 window sets.
+    owner: Eng. Malek Salameh (Consultant)
+    activity: JN-500
+    date: 2026-07-20
+    dueDate: 2026-08-06
+    status: open

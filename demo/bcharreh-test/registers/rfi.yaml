@@ -1,0 +1,19 @@
+# RFI register — BCHARREH-TEST (fictional test data)
+nextRef: 3
+entries:
+  - ref: RFI-001
+    subject: Junction detail — new steel tie into rubble stone wall at House A gable
+    detail: >
+      Drawing S-204 shows a 200mm embedment; the gable wall is loose rubble
+      with voids. Propose resin anchors into dressed quoins instead —
+      confirm detail before the last four ties are fixed.
+    owner: Eng. Malek Salameh (Consultant)
+    activity: SR-400
+    date: 2026-07-16
+    status: open
+  - ref: RFI-002
+    subject: Chimney flue lining — House B kitchen stack
+    owner: Eng. Malek Salameh (Consultant)
+    date: 2026-06-30
+    answered: 2026-07-06
+    status: answered

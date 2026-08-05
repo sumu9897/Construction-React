@@ -5,7 +5,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  // pm-agent is a separate Node project with its own toolchain and tests —
+  // linting it with the website's browser config is all false positives.
+  { ignores: ['dist', 'pm-agent'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -29,6 +31,8 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      // No TypeScript and no PropTypes by design; the rule is all noise here.
+      'react/prop-types': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

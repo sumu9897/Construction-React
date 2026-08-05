@@ -1,0 +1,56 @@
+# Render blueprint for the PMCC marketing site.
+#
+# Render reads this on "New > Blueprint" and configures the service from it, so
+# the deployment settings are in the repository rather than in a dashboard
+# nobody can review. Push to `main` and Render rebuilds.
+#
+# Only the website is deployed. `pm-agent/` is a separate thing that runs on the
+# Mac mini and holds contract data - it is never built or served from here.
+
+services:
+  - type: web
+    name: pmcc
+    runtime: static
+    buildCommand: npm ci && npm run build && npm run build:app
+    staticPublishPath: ./dist
+
+    # Client-side routing. /daher-el-souane-563 is a real URL a client will be
+    # sent directly, and on a static host every path that is not a file on disk
+    # 404s unless it is rewritten to the app shell. This single rule is the
+    # difference between the project page working and working only if you
+    # happen to arrive via the homepage.
+    routes:
+      # The development has its own baked-in <head> so a link forwarded on
+      # WhatsApp previews the apartments, not the company homepage. This must
+      # come before the catch-all.
+      - type: rewrite
+        source: /daher-el-souane-563
+        destination: /daher-el-souane-563.html
+      # The owner portal is its own SPA under /app — its client routes must
+      # fall through to its own shell, never the website's.
+      - type: rewrite
+        source: /app
+        destination: /app/index.html
+      - type: rewrite
+        source: /app/*
+        destination: /app/index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
+
+    headers:
+      # Vite fingerprints every asset filename, so a cached copy can never be
+      # stale - the name changes when the content does.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
