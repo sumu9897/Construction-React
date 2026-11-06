@@ -6,10 +6,9 @@
  * the site ships with this wiring in place and lights up the day the IDs are
  * pasted in. No ID, no third-party script, no consent surface needed.
  *
- * GA4 answers "which channel and country do buyers come from"; the Meta pixel
- * exists so Instagram/Facebook ads can optimise for people who actually
- * enquire, not people who scroll. In Lebanon-diaspora marketing the second
- * one is the workhorse.
+ * GA4 answers "which channel and location do buyers come from"; the Meta pixel
+ * exists so ad campaigns can optimise for people who actually
+ * enquire, not people who merely scroll.
  */
 
 /** Paste the GA4 measurement ID here, e.g. "G-XXXXXXXXXX". Empty = off. */

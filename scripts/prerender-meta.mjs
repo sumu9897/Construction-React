@@ -18,14 +18,14 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dist = path.join(root, "dist");
 
 // Imported from the app so the copy can never drift between the baked HTML
 // and what the client sets on navigation.
-const { PAGES, PROJECT_LD, SITE } = await import(path.join(root, "src/lib/seo.js"));
+const { PAGES, PROJECT_LD, SITE } = await import(pathToFileURL(path.join(root, "src/lib/seo.js")).href);
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -49,7 +49,7 @@ function applyMeta(html, page, extraLd) {
 
   const og = [
     ["og:type", "website"],
-    ["og:site_name", "PMCC"],
+    ["og:site_name", "American Financial Associates"],
     ["og:title", page.title],
     ["og:description", page.description],
     ["og:image", page.image],

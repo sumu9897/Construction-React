@@ -19,7 +19,7 @@ export default function Timeline() {
       <div className="mx-auto max-w-6xl">
         <p className="type-eyebrow text-smoke">Since {company.since}</p>
         <Lines className="type-display mt-6 max-w-3xl text-[clamp(2.2rem,5vw,4.2rem)] text-bone">
-          Three decades of building <em className="type-display-it text-stone">across Lebanon.</em>
+          Three decades of building <em className="type-display-it text-stone">across the United States.</em>
         </Lines>
         <div className="mt-14 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {achievements.map((a, i) => (

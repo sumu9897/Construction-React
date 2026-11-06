@@ -84,11 +84,11 @@ export default function BeforeAfter() {
               if (e.buttons > 0) fromEvent(e);
             }}
           >
-            <img src={AFTER} alt="Daher el Souane 563, the finished building" className="w-full" draggable="false" />
+            <img src={AFTER} alt="1084 Curry Road, the finished building" className="w-full" draggable="false" />
             <img
               ref={topImg}
               src={BEFORE}
-              alt="Daher el Souane 563, the site under construction"
+              alt="1084 Curry Road, the site under construction"
               className="absolute inset-0 h-full w-full object-cover"
               style={{ clipPath: "inset(0 50% 0 0)" }}
               draggable="false"

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D31435" />
+      <stop offset="100%" stop-color="#B30B24" />
+    </linearGradient>
+    <linearGradient id="goldBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C9BBA2" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#EFE9DD" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#C9BBA2" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background container with subtle architectural border -->
+  <rect width="512" height="512" rx="12" fill="url(#bgGrad)" />
+  <rect x="32" y="32" width="448" height="448" rx="8" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="2" />
+  <rect x="42" y="42" width="428" height="428" rx="4" fill="none" stroke="#C9BBA2" stroke-opacity="0.3" stroke-width="1" />
+
+  <!-- Architectural Roof / Apex Pediment -->
+  <path d="M 110 96 L 256 56 L 402 96" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="130" y1="116" x2="382" y2="116" stroke="url(#goldBeam)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Monogram AFA crafted with bold architectural geometry -->
+  <!-- Left A -->
+  <g fill="#FFFFFF">
+    <path d="M 124 160 L 92 290 L 126 290 L 138 240 L 174 240 L 186 290 L 220 290 L 188 160 Z M 156 195 L 168 222 L 144 222 Z" />
+    
+    <!-- Center F -->
+    <path d="M 234 160 L 234 290 L 268 290 L 268 244 L 302 244 L 302 222 L 268 222 L 268 184 L 308 184 L 308 160 Z" />
+    
+    <!-- Right A -->
+    <path d="M 356 160 L 324 290 L 358 290 L 370 240 L 406 240 L 418 290 L 452 290 L 420 160 Z M 388 195 L 400 222 L 376 222 Z" />
+  </g>
+
+  <!-- Financial & Construction Foundation Beam -->
+  <line x1="90" y1="330" x2="422" y2="330" stroke="#EFE9DD" stroke-width="3" stroke-linecap="round" />
+  <circle cx="256" cy="330" r="5" fill="#C9BBA2" />
+
+  <!-- Typography -->
+  <text x="256" y="378" text-anchor="middle" fill="#FFFFFF" font-family="'Inter Variable', system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" letter-spacing="4">AMERICAN FINANCIAL</text>
+  <text x="256" y="416" text-anchor="middle" fill="#EFE9DD" font-family="'Fraunces Variable', Georgia, serif" font-size="20" font-weight="500" letter-spacing="6">ASSOCIATES</text>
+  
+  <!-- Sub-badge -->
+  <rect x="136" y="440" width="240" height="26" rx="4" fill="#0D0C0A" fill-opacity="0.35" />
+  <text x="256" y="458" text-anchor="middle" fill="#C9BBA2" font-family="'Inter Variable', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="3">US CONSTRUCTION AGENCY</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 70" width="460" height="70" fill="none">
+  <!-- Square AFA Badge -->
+  <g transform="translate(4, 5)">
+    <rect width="60" height="60" rx="8" fill="#C8102E" />
+    <rect x="3" y="3" width="54" height="54" rx="6" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" />
+    <!-- Mini Apex -->
+    <path d="M 16 16 L 30 11 L 44 16" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <line x1="18" y1="19" x2="42" y2="19" stroke="#C9BBA2" stroke-width="1" />
+    <!-- AFA Monogram in mini badge -->
+    <text x="30" y="38" text-anchor="middle" fill="#FFFFFF" font-family="'Inter Variable', system-ui, sans-serif" font-size="16" font-weight="900" letter-spacing="1.5">AFA</text>
+    <line x1="16" y1="43" x2="44" y2="43" stroke="#EFE9DD" stroke-width="1" />
+    <text x="30" y="52" text-anchor="middle" fill="#C9BBA2" font-family="'Inter Variable', system-ui, sans-serif" font-size="6" font-weight="700" letter-spacing="1">EST. 1996</text>
+  </g>
+
+  <!-- Divider hairline -->
+  <line x1="76" y1="12" x2="76" y2="58" stroke="#2A2722" stroke-width="1" />
+
+  <!-- Typography -->
+  <g transform="translate(88, 0)">
+    <text x="0" y="27" fill="#EFE9DD" font-family="'Inter Variable', system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" letter-spacing="2.5">AMERICAN FINANCIAL</text>
+    <text x="0" y="46" fill="#C9BBA2" font-family="'Fraunces Variable', Georgia, serif" font-size="14" font-weight="500" letter-spacing="3.5">ASSOCIATES</text>
+    <text x="0" y="60" fill="#8F887C" font-family="'Inter Variable', system-ui, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.8">US CONSTRUCTION AGENCY</text>
+  </g>
+</svg>
