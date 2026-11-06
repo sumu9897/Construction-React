@@ -8,9 +8,8 @@
  * Both are needed, for different readers. Google renders JavaScript, so it
  * would eventually see the client-side version — but WhatsApp, Facebook,
  * LinkedIn and iMessage do NOT. They fetch the raw HTML and read whatever is
- * in <head> at that moment. In Lebanon the link is forwarded on WhatsApp far
- * more often than it is found on Google, so the baked-in copy is the one that
- * actually earns the enquiry.
+ * in <head> at that moment. The baked-in copy is the one that
+ * reliably earns the enquiry.
  */
 
 export const SITE = "https://pmcclb.com";
@@ -21,9 +20,9 @@ const abs = (path) => `${SITE}${path}`;
 export const PAGES = {
   home: {
     path: "/",
-    title: "PMCC · General Contracting & Project Management, Lebanon",
+    title: "American Financial Associates · US Construction Agency & Project Management",
     description:
-      "PMCC S.A.R.L. General contracting and project management across Lebanon since 1996. Microsoft, MEDCO, McDonald's and Arab Investment Bank among past clients. Now selling: Daher el Souane 563.",
+      "American Financial Associates LLC. Premier US construction agency delivering general contracting, construction management, and capital project execution nationwide. Contact: contact@americangroupfinance.com.",
     // Dedicated 1200×630 JPEG cards: exactly the aspect the scrapers crop
     // to, and JPEG because WhatsApp/Facebook handle webp og:images unreliably.
     // Two cards on purpose — the company link previews as the brand, the
@@ -32,15 +31,15 @@ export const PAGES = {
     // re-scrapes: bump it whenever the card's pixels change, or WhatsApp
     // and Facebook keep showing the previous artwork indefinitely.
     image: abs("/im/og-card-home.jpg?v=4"),
-    imageAlt: "PMCC · One team, from start to finish. General contracting and project management, Lebanon.",
+    imageAlt: "American Financial Associates · One team, from start to finish. US Construction Agency.",
   },
   project: {
     path: "/daher-el-souane-563",
-    title: "Daher el Souane 563 · Four-Bedroom Full-Floor Apartments, Mount Lebanon",
+    title: "1084 Curry Road · Four-Bedroom Full-Floor Residences, Clovis, NM",
     description:
-      "Four full-floor residences of 330 m², one per floor, four bedrooms each, in a gated domain 900 m above Beirut. Private gardens and terraces, delivery summer 2027. Developed, managed and built by PMCC.",
+      "Four full-floor residences of 3,550 sq ft at 1084 Curry Road, Clovis, NM 88101. Private gardens and terraces, delivery summer 2027. Developed, managed and built by American Financial Associates.",
     image: abs("/im/og-card.jpg?v=2"),
-    imageAlt: "Daher el Souane 563, three-quarter view among the umbrella pines",
+    imageAlt: "1084 Curry Road Residences, three-quarter view among the pines",
   },
 };
 
@@ -53,23 +52,25 @@ export const ORGANISATION_LD = {
   "@context": "https://schema.org",
   "@type": "GeneralContractor",
   "@id": `${SITE}/#organisation`,
-  name: "PMCC",
-  legalName: "Project Management and Construction Company S.A.R.L.",
+  name: "American Financial Associates",
+  legalName: "American Financial Associates LLC",
   url: SITE,
   logo: abs("/im/logo.png"),
   image: abs("/im/hero-three-quarter-1280.webp"),
   foundingDate: "1996",
   description:
-    "General contracting and project management across Lebanon since 1996. One team, from budgeting to handover.",
+    "Premier US construction agency delivering general contracting, project management, and construction advisory. One team, from budgeting to handover.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Al-Bustan Building, Amaret Chalhoub, Nahr El Mot Highway",
-    addressRegion: "Metn",
-    addressCountry: "LB",
+    streetAddress: "1084 Curry Road",
+    addressLocality: "Clovis",
+    addressRegion: "NM",
+    postalCode: "88101",
+    addressCountry: "US",
   },
-  telephone: "+961 3 616 222",
-  email: "info@pmcclb.com",
-  areaServed: { "@type": "Country", name: "Lebanon" },
+  telephone: "+1 989 380 2254",
+  email: "contact@americangroupfinance.com",
+  areaServed: { "@type": "Country", name: "United States" },
   knowsAbout: [
     "Construction management",
     "General contracting",
@@ -83,10 +84,10 @@ export const PROJECT_LD = {
   "@context": "https://schema.org",
   "@type": "ApartmentComplex",
   "@id": `${SITE}/daher-el-souane-563#development`,
-  name: "Daher el Souane 563",
+  name: "1084 Curry Road Residences",
   url: `${SITE}/daher-el-souane-563`,
   description:
-    "A boutique building of four full-floor, four-bedroom residences on a terraced garden site in Daher el Souane, Mount Lebanon. One apartment per floor, elevator to every level, basement parking. Architecture by A20/partners; developed, managed and built by PMCC.",
+    "A boutique residential building of four full-floor, four-bedroom residences at 1084 Curry Road, Clovis, NM 88101. One apartment per floor, private elevator to every level, secure underground parking. Architecture by A20/partners; developed, managed and built by American Financial Associates.",
   image: [
     abs("/im/hero-three-quarter-2560.webp"),
     abs("/im/elevation-front-2560.webp"),
@@ -97,9 +98,11 @@ export const PROJECT_LD = {
   petsAllowed: true,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Daher el Souane",
-    addressRegion: "Mount Lebanon",
-    addressCountry: "LB",
+    streetAddress: "1084 Curry Road",
+    addressLocality: "Clovis",
+    addressRegion: "NM",
+    postalCode: "88101",
+    addressCountry: "US",
   },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "One residence per floor", value: true },

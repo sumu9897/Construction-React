@@ -6,7 +6,7 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { gsap, reducedMotion } from "../lib/motion";
 
-const SEEN_KEY = "pmcc-preloaded";
+const SEEN_KEY = "afa-preloaded";
 
 export default function Preloader({ onDone }) {
   const [skip] = useState(

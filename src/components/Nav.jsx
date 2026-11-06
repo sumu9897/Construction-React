@@ -54,8 +54,8 @@ export default function Nav() {
       } ${scrolled ? "bg-ink/80 backdrop-blur-sm" : ""}`}
     >
       <nav className="flex items-center justify-between px-5 py-3 sm:px-8">
-        <Link to="/" aria-label="PMCC home" className="inline-flex min-h-[44px] items-center transition-opacity hover:opacity-80">
-          <Monogram className="h-7" />
+        <Link to="/" aria-label="American Financial Associates home" className="inline-flex min-h-[44px] items-center transition-opacity hover:opacity-80">
+          <Monogram className="h-8" />
         </Link>
         <div className="flex items-center gap-4 sm:gap-6">
           <span className="flex flex-col items-end whitespace-nowrap">
@@ -69,7 +69,7 @@ export default function Nav() {
                 onProject ? "underline underline-offset-4" : ""
               }`}
             >
-              Daher el Souane 563
+              1084 Curry Road
             </Link>
           </span>
           <a
@@ -77,9 +77,16 @@ export default function Nav() {
             target="_blank"
             rel="noreferrer"
             onClick={() => track("whatsapp_click", { source: "nav" })}
+            className={`${linkCls} hidden md:inline-flex`}
+          >
+            WhatsApp
+          </a>
+          <a
+            href={`mailto:${company.email}`}
+            onClick={() => track("email_click", { source: "nav" })}
             className={`${linkCls} hidden sm:inline-flex`}
           >
-            Contact
+            Contact Us
           </a>
         </div>
       </nav>

@@ -1,13 +1,6 @@
 /**
- * The lead form, phone-first. In this market WhatsApp is how deals start, so
- * the phone number is the required field and email is optional. The dial-code
- * picker does double duty: it removes the "how do I write my number" friction
- * for diaspora buyers AND records which country the enquiry came from — the
- * datum that decides where the ad budget goes.
- *
- * Submissions go to info@pmcclb.com through FormSubmit's AJAX endpoint — a
- * static site has no server, and this keeps the enquiry in the inbox the
- * company already reads. (Activated: the confirmation link was clicked.)
+ * The lead form for American Financial Associates.
+ * Submissions go to contact@americangroupfinance.com through FormSubmit's AJAX endpoint.
  */
 import { useState } from "react";
 import { company, project } from "../data/content";
@@ -16,42 +9,24 @@ import { track } from "../lib/analytics";
 const ENDPOINT = `https://formsubmit.co/ajax/${company.email}`;
 
 /**
- * Dial codes the diaspora actually calls from, Lebanon first. The label is
- * what gets recorded as the enquiry's country.
+ * Dial codes with United States first.
  */
 const DIAL_CODES = [
-  ["+961", "Lebanon"],
+  ["+1", "United States"],
+  ["+1", "Canada"],
+  ["+44", "United Kingdom"],
+  ["+61", "Australia"],
+  ["+49", "Germany"],
+  ["+33", "France"],
+  ["+41", "Switzerland"],
   ["+971", "UAE"],
   ["+966", "Saudi Arabia"],
   ["+974", "Qatar"],
-  ["+965", "Kuwait"],
-  ["+973", "Bahrain"],
-  ["+968", "Oman"],
-  ["+962", "Jordan"],
-  ["+20", "Egypt"],
-  ["+90", "Türkiye"],
-  ["+357", "Cyprus"],
-  ["+33", "France"],
-  ["+44", "United Kingdom"],
-  ["+49", "Germany"],
-  ["+41", "Switzerland"],
-  ["+32", "Belgium"],
-  ["+31", "Netherlands"],
-  ["+34", "Spain"],
   ["+39", "Italy"],
-  ["+30", "Greece"],
-  ["+46", "Sweden"],
-  ["+1", "USA / Canada"],
+  ["+34", "Spain"],
+  ["+31", "Netherlands"],
   ["+55", "Brazil"],
   ["+52", "Mexico"],
-  ["+54", "Argentina"],
-  ["+61", "Australia"],
-  ["+234", "Nigeria"],
-  ["+233", "Ghana"],
-  ["+225", "Côte d'Ivoire"],
-  ["+221", "Senegal"],
-  ["+243", "DR Congo"],
-  ["+27", "South Africa"],
 ];
 
 /** Palette per background: the form sits on bone on the project page, ink in the footer. */
@@ -112,7 +87,7 @@ export default function LeadForm({ tone = "light", source = "site", showWhatsApp
   }
 
   const wa = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
-    `Hello PMCC, please send me the price list and floor plans for ${project.name}.`,
+    `Hello American Financial Associates, please send me information regarding ${project.name}.`,
   )}`;
 
   if (status === "sent") {
@@ -147,7 +122,7 @@ export default function LeadForm({ tone = "light", source = "site", showWhatsApp
           <div className="mt-2 flex gap-2">
             <select
               name="dial"
-              defaultValue="+961"
+              defaultValue="+1"
               aria-label="Country code"
               className={`w-[7.5rem] shrink-0 border px-2 py-3 font-sans text-sm outline-none transition-colors ${t.select}`}
             >
@@ -162,10 +137,10 @@ export default function LeadForm({ tone = "light", source = "site", showWhatsApp
               type="tel"
               required
               inputMode="tel"
-              pattern="[0-9 ]{5,15}"
-              title="Digits only, e.g. 3 616 222"
+              pattern="[0-9 \-\(\)\+]{5,20}"
+              title="Phone number, e.g. (989) 380-2254"
               autoComplete="tel-national"
-              placeholder="3 616 222"
+              placeholder="(989) 380-2254"
               className={`min-w-0 flex-1 border px-4 py-3 font-sans text-sm outline-none transition-colors ${t.input}`}
             />
           </div>
@@ -205,22 +180,38 @@ export default function LeadForm({ tone = "light", source = "site", showWhatsApp
 
         {status === "error" && (
           <p className="font-sans text-xs text-pmcc" role="alert">
-            That didn&rsquo;t go through. Message us on WhatsApp instead.
+            Unable to submit. Please reach us directly at{" "}
+            <a href={`mailto:${company.email}`} className="underline">
+              {company.email}
+            </a>
+            .
           </p>
         )}
 
         {showWhatsApp && (
           <p className={`font-sans text-xs ${t.fine}`}>
-            Prefer to talk?{" "}
+            Prefer direct contact?{" "}
             <a
-              href={wa}
-              target="_blank"
-              rel="noreferrer"
+              href={`mailto:${company.email}`}
               className={t.link}
-              onClick={() => track("whatsapp_click", { source: `${source}-form` })}
+              onClick={() => track("email_click", { source: `${source}-form` })}
             >
-              Message us on WhatsApp
+              Email us at {company.email}
             </a>
+            {company.whatsapp && (
+              <>
+                {" "}or{" "}
+                <a
+                  href={wa}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={t.link}
+                  onClick={() => track("whatsapp_click", { source: `${source}-form` })}
+                >
+                  WhatsApp
+                </a>
+              </>
+            )}
           </p>
         )}
       </div>

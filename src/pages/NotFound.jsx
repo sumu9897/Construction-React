@@ -11,7 +11,7 @@ import { project } from "../data/content";
 
 export default function NotFound() {
   useLayoutEffect(() => {
-    document.title = "Page not found · PMCC";
+    document.title = "Page not found · American Financial Associates";
     const meta = document.createElement("meta");
     meta.name = "robots";
     meta.content = "noindex";
@@ -36,7 +36,7 @@ export default function NotFound() {
           to="/"
           className="inline-flex items-center gap-3 bg-pmcc px-7 py-4 font-sans text-sm font-semibold text-bone"
         >
-          PMCC home →
+          American Financial Associates home →
         </Link>
         <Link
           to="/daher-el-souane-563"

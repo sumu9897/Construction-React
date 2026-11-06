@@ -80,7 +80,7 @@ function Introduction() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <p className="type-eyebrow text-smoke">Introduction</p>
         <Lines className="type-display mt-6 max-w-4xl text-[clamp(2.2rem,5.4vw,4.4rem)] text-bone">
-          Dahr el Sawan <em className="type-display-it text-stone">private residences.</em>
+          1084 Curry Road <em className="type-display-it text-stone">private residences.</em>
         </Lines>
       </div>
 
@@ -102,9 +102,9 @@ function Introduction() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <Fade className="mt-14">
           <p className="max-w-2xl font-sans text-base leading-relaxed text-bone/85">
-            A gated development on the green ridge above the coast, twenty minutes from
-            Beirut and a world away from it. One boutique building, four full-floor
-            residences, gardens terraced into the hillside, and an elevator to every level.
+            A gated luxury enclave at 1084 Curry Road in Clovis, New Mexico, offering expansive skies
+            and quiet serenity. One boutique building, four full-floor residences, private terraced grounds,
+            and private elevator access to every level.
           </p>
           <p className="mt-4 font-sans text-xs uppercase tracking-wideish text-smoke">
             Architecture · {project.architect}
@@ -176,7 +176,7 @@ function TheView() {
         <WarpImage
           src="/im/view-ridge-3200.webp"
           srcSet="/im/view-ridge-1280.webp 1280w, /im/view-ridge-2444.webp 2444w, /im/view-ridge-3200.webp 3200w"
-          alt="The view from the site, over the Metn valley and the mountains beyond, photographed at Daher el Souane"
+          alt="The view from the site, over the landscape and horizon beyond, photographed at 1084 Curry Road"
           className="h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-ink/30" />
@@ -184,11 +184,11 @@ function TheView() {
           <p className="type-eyebrow text-bone/90">The view · photographed on site</p>
           <p className="type-display mt-4 text-[clamp(3.4rem,11vw,9rem)] leading-none text-bone">
             <span data-altitude>{project.location.altitude}</span>
-            <span className="text-stone"> m</span>
+            <span className="text-stone"> ft</span>
           </p>
           <p className="mt-4 max-w-md font-sans text-sm leading-relaxed text-bone/85">
-            above the sea. The valley below, the mountains across, and Beirut twenty
-            minutes down the hill.
+            above sea level. Expansive panoramic horizons, pure Western skies, and Downtown Clovis
+            ten minutes away.
           </p>
         </div>
       </div>
@@ -286,10 +286,8 @@ function TheStandard() {
 }
 
 /**
- * The location, laid out as the project book lays it out: Lebanon in the
- * middle with the site marked, its sight-lines fanning out into the two
- * satellite maps — country, then area, then the site itself. The maps
- * land like pinned photographs, with a slight tilt that rights itself.
+ * The location, presenting the Bel Air promontory enclave with interactive
+ * satellite coordinates, regional orientation, and site topography.
  */
 function LocationSpread() {
   const root = useRef(null);
@@ -298,14 +296,14 @@ function LocationSpread() {
     if (reducedMotion()) return undefined;
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        "[data-lebanon]",
+        "[data-map-overview]",
         { autoAlpha: 0, y: 40 },
         {
           autoAlpha: 1,
           y: 0,
           duration: 1,
           ease: "power3.out",
-          scrollTrigger: { trigger: "[data-lebanon]", start: "top 88%", once: true },
+          scrollTrigger: { trigger: "[data-map-overview]", start: "top 88%", once: true },
         },
       );
       gsap.utils.toArray("[data-map]").forEach((el, i) => {
@@ -332,7 +330,7 @@ function LocationSpread() {
       <div className="mx-auto max-w-6xl">
         <p className="type-eyebrow text-smoke">The location</p>
         <Lines className="type-display mt-6 max-w-3xl text-[clamp(1.9rem,4.2vw,3.4rem)] text-bone">
-          In the green hills <em className="type-display-it text-stone">above Beirut.</em>
+          At 1084 Curry Road <em className="type-display-it text-stone">Clovis, New Mexico.</em>
         </Lines>
         <Fade className="mt-6">
           <p className="max-w-2xl font-sans text-sm leading-relaxed text-smoke">{book563.locationBlurb}</p>
@@ -348,26 +346,51 @@ function LocationSpread() {
             ))}
           </div>
           <p className="mt-2 font-sans text-[0.65rem] text-smoke/70">{project.location.note}</p>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=VMX8%2B9V7%2C+Dahr+El+Souane%2C+Lebanon"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-7 inline-flex items-center gap-3 bg-pmcc px-7 py-3.5 font-sans text-sm font-semibold text-bone"
-          >
-            Open in Google Maps
-            <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </a>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a
+              href={project.location.googleMapsUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 bg-pmcc px-7 py-3.5 font-sans text-sm font-semibold text-bone hover:bg-pmcc/90 transition-colors"
+            >
+              Open in Google Maps
+              <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+            <a
+              href={project.location.zillowUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 border border-seam px-7 py-3.5 font-sans text-sm text-bone hover:border-stone transition-colors"
+            >
+              Explore Clovis on Zillow
+              <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
         </Fade>
-        {/* The country and the area, side by side: Lebanon's sight-lines
-            point straight into the satellite map beside it. */}
-        <div className="mx-auto mt-16 grid max-w-4xl grid-cols-[minmax(0,0.6fr)_minmax(0,1.4fr)] items-center gap-2 sm:gap-4">
-          <img
-            data-lebanon
-            src="/im/dsw-lebanon.webp"
-            alt="Lebanon, with the project location marked in the hills above Beirut at Dahr el Sawan"
-            loading="lazy"
-            className="w-full max-w-[260px] justify-self-end"
-          />
+
+        {/* Real US location & architectural plate */}
+        <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] items-start gap-6">
+          <div data-map-overview className="border border-seam bg-coal p-4 rounded-sm">
+            <div className="flex items-center justify-between pb-3 text-[0.7rem] uppercase tracking-wider text-smoke border-b border-seam mb-3">
+              <span className="font-semibold text-bone">1084 Curry Road · Clovis, NM</span>
+              <span className="text-pmcc font-bold">88101</span>
+            </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden bg-ink/70 border border-seam">
+              <iframe
+                title="1084 Curry Road Google Map"
+                src={project.location.googleMapsEmbedUrl}
+                width="100%"
+                height="100%"
+                style={{ border: 0, filter: "contrast(1.05) brightness(0.95)" }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              />
+            </div>
+            <p className="mt-3 font-sans text-xs leading-relaxed text-smoke">
+              Official Property Coordinates: <strong className="text-bone font-medium">1084 Curry Road, Clovis, NM 88101</strong>
+            </p>
+          </div>
           <figure data-map>
             <div className="border border-seam bg-coal p-2">
               <img src={book563.map.src} alt={book563.map.alt} loading="lazy" className="w-full" />
@@ -394,7 +417,7 @@ function Faq() {
     },
     {
       q: "Who is behind the project?",
-      a: "PMCC is the developer, the manager and the builder. One company, accountable since 1996. Past clients include Microsoft, MEDCO, McDonald's and Arab Investment Bank. Architecture by A20/partners.",
+      a: "American Financial Associates is the developer, manager, and builder. One company, accountable since 1996. Past clients include Microsoft, McDonald's, and leading corporate and private institutions. Architecture by A20/partners.",
     },
     {
       q: "How private is 'one residence per floor'?",
@@ -462,20 +485,33 @@ function Availability() {
         <Fade className="mt-12">
           <LeadForm tone="light" source="project" showWhatsApp={false} />
         </Fade>
-        <Fade className="mt-8 flex justify-center">
+        <Fade className="mt-8 flex flex-wrap justify-center gap-4">
           <Magnetic>
             <a
-              href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
-                "Hello PMCC — I'm interested in Daher el Souane 563.",
+              href={`mailto:${company.email}?subject=${encodeURIComponent(
+                "Inquiry — 1084 Curry Road",
+              )}&body=${encodeURIComponent(
+                "Hello American Financial Associates team,\n\nI am interested in learning more about 1084 Curry Road.",
               )}`}
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => track("whatsapp_click", { source: "project-availability" })}
-              className="inline-flex items-center gap-3 bg-ink px-8 py-4 font-sans text-sm font-semibold text-bone"
+              onClick={() => track("email_click", { source: "project-availability" })}
+              className="inline-flex items-center gap-3 bg-ink px-8 py-4 font-sans text-sm font-semibold text-bone hover:bg-coal transition-colors border border-seam"
             >
-              Or enquire on WhatsApp →
+              Contact Us: {company.email}
+              <span aria-hidden>→</span>
             </a>
           </Magnetic>
+          <a
+            href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
+              "Hello American Financial Associates — I'm interested in 1084 Curry Road.",
+            )}`}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => track("whatsapp_click", { source: "project-availability-wa" })}
+            className="inline-flex items-center gap-3 bg-pmcc px-8 py-4 font-sans text-sm font-semibold text-bone hover:opacity-95 transition-opacity"
+          >
+            WhatsApp {company.mobile}
+            <span aria-hidden>→</span>
+          </a>
         </Fade>
         <Fade className="mt-10">
           <p className="font-sans text-xs text-ink/55">
@@ -513,14 +549,23 @@ function StickyCta() {
     >
       <a
         href={`https://wa.me/${company.whatsapp}?text=${encodeURIComponent(
-          "Hello PMCC — I'm interested in Daher el Souane 563.",
+          "Hello American Financial Associates — I'm interested in 1084 Curry Road.",
         )}`}
         target="_blank"
         rel="noreferrer"
         onClick={() => track("whatsapp_click", { source: "sticky-bar" })}
-        className="flex-1 bg-pmcc py-4 text-center font-sans text-sm font-semibold text-bone"
+        className="flex-1 bg-pmcc py-4 text-center font-sans text-sm font-semibold text-bone hover:bg-pmcc/90"
       >
         WhatsApp
+      </a>
+      <a
+        href={`mailto:${company.email}?subject=${encodeURIComponent(
+          "Inquiry — 1084 Curry Road",
+        )}`}
+        onClick={() => track("email_click", { source: "sticky-bar-email" })}
+        className="flex-1 py-4 text-center font-sans text-sm font-semibold text-bone hover:text-stone"
+      >
+        Email Us
       </a>
       <button
         type="button"

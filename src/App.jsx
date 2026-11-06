@@ -49,6 +49,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/daher-el-souane-563" element={<Project />} />
+          <Route path="/1084-curry-road" element={<Project />} />
+          <Route path="/563-bel-air" element={<Project />} />
+          <Route path="/bel-air-563" element={<Project />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
